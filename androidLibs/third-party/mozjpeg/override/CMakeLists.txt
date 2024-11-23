@@ -56,20 +56,8 @@ list(APPEND mozjpegsources
   jdarith.c
   transupp.c
   jmemnobs.c
+  jsimd_none.c
 )
-
-if(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "armv7-a")
-  message(STATUS "Building mozjpeg with armv7-a SIMD support")
-  list(APPEND mozjpegsources
-    simd/jsimd_arm.c
-    simd/jsimd_arm_neon.S
-  )
-else()
-  message(STATUS "Building mozjpeg without SIMD support")
-  list(APPEND mozjpegsources
-    jsimd_none.c
-  )
-endif()
 
 
 add_library(mozjpeg STATIC ${mozjpegsources})

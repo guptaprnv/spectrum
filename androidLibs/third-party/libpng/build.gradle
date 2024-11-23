@@ -21,12 +21,12 @@ apply plugin: SpectrumDownloadAndMergePlugin
 import org.apache.tools.ant.filters.ReplaceTokens
 
 downloadAndMergeNativeLibrary {
-  externalSourceUri 'https://github.com/glennrp/libpng/archive/v1.6.35.tar.gz'
-  externalSourceInclude 'libpng-1.6.35/**'
+  externalSourceUri 'https://github.com/glennrp/libpng/archive/v1.6.37.tar.gz'
+  externalSourceInclude 'libpng-1.6.37/**'
   overrideInclude '**'
   filesMatchingPattern '**'
   filesMatchingAction {
-      it.path = it.path - "libpng-1.6.35"
+      it.path = it.path - "libpng-1.6.37"
   }
   cacheRevision = 1
 }

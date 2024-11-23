@@ -20,6 +20,7 @@ add_library(libpng STATIC
   arm/arm_init.c
   arm/filter_neon_intrinsics.c
   arm/filter_neon.S
+  arm/palette_neon_intrinsics.c
 )
 
 target_compile_options(libpng PRIVATE

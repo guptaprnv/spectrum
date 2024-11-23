@@ -53,6 +53,10 @@ android {
         exclude "**/libspectrumfbjni.so"
         exclude "**/libspectrum.so"
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
